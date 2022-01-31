@@ -28,7 +28,7 @@ footer small a {
 }
 
 .drag {
-    background-color: lightblue;
+    background-color: #00a692;
 }
 
 .info-items td {
@@ -55,6 +55,8 @@ footer small a {
 
 #resizer {
     font-size: 26px;
+    color: #00a692;
+
 }
 
 #resizer i {
@@ -93,6 +95,11 @@ footer small a {
 .ace_hidden-cursors {
     opacity: 0
 }
+
+#sql-editor {
+    min-height: 100px;
+}
+
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
     background-color: #F5F5E7;

@@ -158,7 +158,7 @@ function loadDB(arrayBuffer) {
 
         //Select first table and show It
         tableList.select2("val", firstTableName);
-        doDefaultSelect(firstTableName);
+        doFirstLoad();
 
         $("#output-box").fadeIn();
         $(".nouploadinfo").hide();
@@ -264,6 +264,14 @@ function doDefaultSelect(name) {
     editor.setValue(defaultSelect, -1);
     renderQuery(defaultSelect);
 }
+
+function doFirstLoad() {
+    // var defaultSelect = "SELECT * FROM '" + name + "' LIMIT 0,30";
+    var defaultSelect = "SELECT name,tbl_name FROM sqlite_master WHERE type='table' OR type='view' ORDER BY name";
+    editor.setValue(defaultSelect, -1);
+    renderQuery(defaultSelect);
+}
+
 
 function executeSql() {
     var query = editor.getValue();
